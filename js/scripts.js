@@ -1,4 +1,4 @@
-//Celsius to Fahrenheit converter
+// //Celsius to Fahrenheit converter
 var tempConversion = function (q1){
   var celsius = parseInt(prompt(q1));
   var farhenheit = ((9/5)*celsius)+32;
@@ -8,7 +8,7 @@ var tempConversion = function (q1){
 
 tempConversion("what is the celsius temperature?");
 
-//BMI Calculator
+// //BMI Calculator
 var bmi = function (q1,q2) {
 
 var weight = parseInt(prompt(q1));
@@ -24,13 +24,26 @@ bmi("What is your weight?","What is your height?");
 
 
 
-//multiplier
+//calculator
+var add = function(number1, number2){
+	return number1 + number2;
+};
+
+var subtract = function(number1, number2){
+	return number1 - number2;
+};
+
 var multiply = function(number1, number2){
 	return number1 * number2;
 };
 
+var divide = function(number1, number2){
+	return number1 / number2;
+};
+
 var number1 = parseInt(prompt("enter a number:"));
 var number2 = parseInt(prompt("enter another number:"));
-var results = multiply(number1, number2);
+//must change the variable next to (number1, number) below to change the calculator function)
+var results = divide(number1, number2);
 
 alert(results);
