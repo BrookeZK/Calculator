@@ -19,15 +19,41 @@ var divide = function(number1, number2){
 
 //Everything below this line is user interface (front-end) logic:
 $(document).ready(function(){
-  $("form#add").submit(function(event) {
+  $("#add").click(function(event) {
     event.preventDefault();
     var number1 = parseInt($("#add1").val());
     var number2 = parseInt($("#add2").val());
     var result = add(number1, number2);
     $("#output").text(result);
   });
-});
 
+  $("#subtract").click(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add1").val());
+    var number2 = parseInt($("#add2").val());
+    var result = subtract(number1, number2);
+    $("#output").text(result);
+  });
+
+  $("#multiply").click(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add1").val());
+    var number2 = parseInt($("#add2").val());
+    var result = multiply(number1, number2);
+    $("#output").text(result);
+  });
+
+  $("#divide").click(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add1").val());
+    var number2 = parseInt($("#add2").val());
+    var result = divide(number1, number2);
+    $("#output").text(result);
+  });
+
+  $("#clearForm").click(function(event) {
+  });
+});
 //must change the variable next to (number1, number) below to change the calculator function)
 
 
