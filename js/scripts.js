@@ -17,14 +17,16 @@ var divide = function(number1, number2){
   return number1 / number2;
 };
 
-//Everything below this line is use interface (front-end) logic:
+//Everything below this line is user interface (front-end) logic:
 $(document).ready(function(){
-  var number1 = parseInt(prompt("enter a number:"));
-  var number2 = parseInt(prompt("enter another number:"));
-
-  var results = add(number1, number2);
-  alert(results);
-})
+  $("form#add").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add1").val());
+    var number2 = parseInt($("#add2").val());
+    var result = add(number1, number2);
+    $("#output").text(result);
+  });
+});
 
 //must change the variable next to (number1, number) below to change the calculator function)
 
